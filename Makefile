@@ -1,2 +1,8 @@
-indexCB:
-	CREATE PRIMARY INDEX `communities_villages` ON `WaterPoint` USING GSI;
+run:
+	./mvnw spring-boot:run
+
+test:
+	./mvnw test
+
+build:
+	./mvnw clean package

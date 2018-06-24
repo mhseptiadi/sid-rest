@@ -25,6 +25,10 @@ public class ParseDataService {
     // Initialize the Connection
     public static Bucket bucket = initBucket(); 
 	
+    public ParseDataService() throws IOException {
+    	parseSource("https://raw.githubusercontent.com/onaio/ona-tech/master/data/water_points.json");
+    }
+    
     private static Bucket initBucket() {
         Cluster cluster = CouchbaseCluster.create("localhost");
         cluster.authenticate("root", "123456");
@@ -51,7 +55,7 @@ public class ParseDataService {
 	        String subJsonString = jsonObj.toString();
 	        RawJsonDocument jsonDoc = RawJsonDocument.create(key, subJsonString);
 	        RawJsonDocument data = bucket.upsert(jsonDoc);
-	        System.out.println(data);
+	        System.out.print(".");
 	    }
 
 	    indexing();
