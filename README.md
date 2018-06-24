@@ -37,15 +37,11 @@ For create jar of the project you can simply use `make build`.
 ### Accessing Api
 Api list:
 
-- **stat** - used to get overall statistic of all water point, water point per community, and community rank
-`http://localhost:8080/stat`
-- **root** - used for re-mining data from source
-`http://localhost:8080/`
-- **wp/{param}** - used for get water point statistic
-`http://localhost:8080/wp/yes`
+- **stat** - `http://localhost:8080/stat` - used to get overall statistic of all water point, water point per community, and community rank
+- **root** - `http://localhost:8080/` - used for re-mining data from source
+- **wp/{param}** - `http://localhost:8080/wp/yes` - used for get water point statistic
 parameter `yes` means percentage shown are percentage of working water point. `no` means otherwise.
-- **wp-per-comm/{param}** - used for get water point statistic per community
-`http://localhost:8080/wp-per-comm/yes`
+- **wp-per-comm/{param}** - `http://localhost:8080/wp-per-comm/yes` - used for get water point statistic per community
 parameter `yes` means percentage shown are percentage of working water point. `no` means otherwise. The community then sort based on the percentage.
 On the other hand, you can use `total` as parameter. Then it will sort based on total water point per community.
 
